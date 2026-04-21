@@ -33,10 +33,6 @@ body {
     @apply inline-flex items-center justify-center gap-2 rounded-none border border-brand-gold bg-transparent px-6 py-3 font-heading tracking-[0.2em] text-brand-gold uppercase text-sm transition-all duration-300 hover:bg-brand-gold hover:text-brand-black;
   }
 
-  .btn-outline-white {
-    @apply inline-flex items-center justify-center gap-2 rounded-none border border-white bg-transparent px-6 py-3 font-heading tracking-[0.2em] text-white uppercase text-sm transition-all duration-300 hover:bg-white hover:text-brand-black;
-  }
-
   .section-label {
     @apply font-heading uppercase tracking-[0.4em] text-xs text-brand-gold;
   }
