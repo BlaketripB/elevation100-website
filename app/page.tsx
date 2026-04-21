@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import HeroLogo from "@/components/HeroLogo";
+import HeroBackground from "@/components/HeroBackground";
 import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 
 export const metadata: Metadata = {
@@ -61,12 +62,20 @@ export default function HomePage() {
     <>
       <LocalBusinessSchema />
       {/* Hero */}
-      <section className="relative bg-white">
-        <div className="container-pad py-20 md:py-28 flex flex-col items-center text-center">
+      <section className="relative isolate flex items-center justify-center min-h-screen overflow-hidden">
+        <HeroBackground />
+        {/* Dark overlay */}
+        <div
+          className="absolute inset-0 -z-10"
+          style={{ backgroundColor: "rgba(10, 10, 10, 0.65)" }}
+          aria-hidden
+        />
+
+        <div className="relative container-pad py-24 md:py-32 flex flex-col items-center text-center text-white">
           <HeroLogo />
 
           <Reveal delay={0.35}>
-            <h1 className="heading-xl mt-10 text-brand-black">
+            <h1 className="heading-xl mt-10 text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.5)]">
               ELEVATION 100
               <span className="block text-brand-gold text-2xl sm:text-3xl md:text-4xl tracking-[0.3em] mt-3">
                 WHERE BUILDING BEGINS
@@ -79,7 +88,7 @@ export default function HomePage() {
           </Reveal>
 
           <Reveal delay={0.7}>
-            <p className="mt-6 max-w-xl text-sm md:text-base text-brand-black/70">
+            <p className="mt-6 max-w-xl text-sm md:text-base text-white opacity-90">
               Custom homes, plans, framing, remodels, and steel — built with
               craftsmanship that lasts generations.
             </p>
@@ -90,7 +99,7 @@ export default function HomePage() {
               <Link href="/contact" className="btn-gold">
                 Get a Quote
               </Link>
-              <Link href="/gallery" className="btn-outline-gold">
+              <Link href="/gallery" className="btn-outline-white">
                 View Our Work
               </Link>
             </div>

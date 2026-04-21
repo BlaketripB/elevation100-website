@@ -17,6 +17,7 @@ export default function HeroLogo() {
         fill
         sizes="(max-width: 768px) 60vw, 30vw"
         className="object-contain"
+        style={{ filter: "brightness(0) invert(1)" }}
         priority
         fetchPriority="high"
       />
