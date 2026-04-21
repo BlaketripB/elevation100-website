@@ -89,7 +89,7 @@ export default function HomePage() {
 
           <Reveal delay={0.7}>
             <p className="mt-6 max-w-xl text-sm md:text-base text-white opacity-90">
-              Custom homes, plans, framing, remodels, and steel — built with
+              Custom homes, plans, framing, remodels, and steel, built with
               craftsmanship that lasts generations.
             </p>
           </Reveal>
