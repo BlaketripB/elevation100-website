@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-gold: #c9a84c;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  @apply bg-white text-brand-black font-body antialiased;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@layer components {
+  .container-pad {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12;
+  }
+
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 rounded-none border border-brand-gold bg-brand-gold px-6 py-3 font-heading tracking-[0.2em] text-brand-black uppercase text-sm transition-all duration-300 hover:bg-transparent hover:text-brand-gold hover:shadow-gold;
+  }
+
+  .btn-outline-gold {
+    @apply inline-flex items-center justify-center gap-2 rounded-none border border-brand-gold bg-transparent px-6 py-3 font-heading tracking-[0.2em] text-brand-gold uppercase text-sm transition-all duration-300 hover:bg-brand-gold hover:text-brand-black;
+  }
+
+  .section-label {
+    @apply font-heading uppercase tracking-[0.4em] text-xs text-brand-gold;
+  }
+
+  .heading-xl {
+    @apply font-heading uppercase tracking-wide text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[0.95];
+  }
+
+  .heading-lg {
+    @apply font-heading uppercase tracking-wide text-3xl sm:text-4xl md:text-5xl leading-tight;
+  }
+
+  .gold-divider {
+    @apply mx-auto h-px w-24 bg-brand-gold;
+  }
+}
+
+.blueprint-bg {
+  background-color: #0a2342;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.06) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* smooth scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #c9a84c;
+  border-radius: 0;
+}
