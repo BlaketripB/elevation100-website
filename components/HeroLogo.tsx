@@ -9,20 +9,18 @@ export default function HeroLogo() {
       initial={{ opacity: 0, scale: 0.92 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 1.1, ease: "easeOut" }}
-      className="relative mx-auto flex items-center justify-center rounded-full bg-white aspect-square p-6 sm:p-8 w-[65vw] sm:w-[48vw] md:w-[32vw] lg:w-[28vw]"
-      style={{ boxShadow: "0 10px 40px rgba(0, 0, 0, 0.3)" }}
+      className="relative mx-auto aspect-square w-[60vw] sm:w-[42vw] md:w-[28vw] lg:w-[24vw]"
     >
-      <div className="relative w-full h-full">
-        <Image
-          src="/images/logo.png"
-          alt="Elevation 100 LLC crosshair compass logo"
-          fill
-          sizes="(max-width: 768px) 65vw, 30vw"
-          className="object-contain"
-          priority
-          fetchPriority="high"
-        />
-      </div>
+      <Image
+        src="/images/logo.png"
+        alt="Elevation 100 LLC crosshair compass logo"
+        fill
+        sizes="(max-width: 768px) 60vw, 25vw"
+        className="object-contain"
+        style={{ filter: "drop-shadow(0 4px 20px rgba(0, 0, 0, 0.5))" }}
+        priority
+        fetchPriority="high"
+      />
     </motion.div>
   );
 }
