@@ -9,13 +9,13 @@ export default function HeroLogo() {
       initial={{ opacity: 0, scale: 0.92 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 1.1, ease: "easeOut" }}
-      className="relative mx-auto aspect-square w-[60%] sm:w-[45%] md:w-[30%] lg:w-[28%]"
+      className="relative mx-auto aspect-square w-[50vw] sm:w-[38vw] md:w-[25vw] lg:w-[23vw]"
     >
       <Image
         src="/images/logo.png"
         alt="Elevation 100 LLC crosshair compass logo"
         fill
-        sizes="(max-width: 768px) 60vw, 30vw"
+        sizes="(max-width: 768px) 50vw, 25vw"
         className="object-contain"
         priority
         fetchPriority="high"
