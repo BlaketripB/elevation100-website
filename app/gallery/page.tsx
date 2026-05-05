@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Project Gallery | Elevation 100 LLC Custom Home Construction",
   description:
-    "View our latest custom home builds, framing projects, remodels, and steel installations. Real client reviews and project photos from Elevation 100 LLC.",
+    "View our latest custom home builds, framing projects, remodels, and steel installations from Elevation 100 LLC.",
   alternates: { canonical: "/gallery" },
   openGraph: {
     title: "Project Gallery | Elevation 100 LLC Custom Home Construction",
@@ -19,79 +19,54 @@ export const metadata: Metadata = {
 type Photo = {
   src: string;
   category: string;
-  comment: string;
-  client: string;
+  caption: string;
+  priority?: boolean;
 };
 
 const recentWork: Photo[] = [
   {
-    src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1400&q=80",
+    src: "/gallery/framing-current-trusses.jpg",
     category: "Recent Work",
-    comment:
-      "Elevation 100 exceeded every expectation. The craftsmanship is unmatched.",
-    client: "John D.",
+    caption: "Current Framing Project",
+    priority: true,
   },
   {
-    src: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1400&q=80",
+    src: "/gallery/remodel-current-project.jpg",
     category: "Recent Work",
-    comment:
-      "Elevation 100 exceeded every expectation. The craftsmanship is unmatched.",
-    client: "John D.",
+    caption: "Current Remodel Project",
+  },
+  {
+    src: "/gallery/framing-mountain-view.jpg",
+    category: "Recent Work",
+    caption: "Recent Project",
+  },
+  {
+    src: "/gallery/custom-metal-install.jpg",
+    category: "Recent Work",
+    caption: "Custom Steel Install",
   },
 ];
 
 const pastProjects: Photo[] = [
   {
-    src: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1400&q=80",
+    src: "/gallery/framing-past-winter-build.jpg",
     category: "Past Projects",
-    comment:
-      "Elevation 100 exceeded every expectation. The craftsmanship is unmatched.",
-    client: "John D.",
+    caption: "Past Framing Project",
   },
   {
-    src: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1400&q=80",
+    src: "/gallery/framing-past-drone-view.jpg",
     category: "Past Projects",
-    comment:
-      "Elevation 100 exceeded every expectation. The craftsmanship is unmatched.",
-    client: "John D.",
-  },
-];
-
-const services: Photo[] = [
-  {
-    src: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1400&q=80",
-    category: "Custom Home Building",
-    comment:
-      "Elevation 100 exceeded every expectation. The craftsmanship is unmatched.",
-    client: "John D.",
+    caption: "Past Framing Project",
   },
   {
-    src: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1400&q=80",
-    category: "Architectural Plan Design",
-    comment:
-      "Elevation 100 exceeded every expectation. The craftsmanship is unmatched.",
-    client: "John D.",
+    src: "/gallery/finishes-elegant-exterior.jpg",
+    category: "Past Projects",
+    caption: "Elegant Exterior Finishes",
   },
   {
-    src: "https://images.unsplash.com/photo-1503387837-b154d5074bd2?w=1400&q=80",
-    category: "Custom Home Framing",
-    comment:
-      "Elevation 100 exceeded every expectation. The craftsmanship is unmatched.",
-    client: "John D.",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1400&q=80",
-    category: "Remodeling",
-    comment:
-      "Elevation 100 exceeded every expectation. The craftsmanship is unmatched.",
-    client: "John D.",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1400&q=80",
-    category: "Steel Installation",
-    comment:
-      "Elevation 100 exceeded every expectation. The craftsmanship is unmatched.",
-    client: "John D.",
+    src: "/gallery/custom-metal-fabrication.jpg",
+    category: "Past Projects",
+    caption: "Custom Steel Build",
   },
 ];
 
@@ -99,12 +74,10 @@ export default function GalleryPage() {
   const sections: { title: string; photos: Photo[] }[] = [
     { title: "Recent Work", photos: recentWork },
     { title: "Past Projects", photos: pastProjects },
-    { title: "Services", photos: services },
   ];
 
   return (
     <section className="relative bg-brand-black text-white" aria-labelledby="gallery-heading">
-      {/* Concrete background layer */}
       <div
         className="absolute inset-0 bg-cover bg-center opacity-30"
         style={{

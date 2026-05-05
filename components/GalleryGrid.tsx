@@ -3,24 +3,14 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Star, X } from "lucide-react";
+import { X } from "lucide-react";
 
 type Photo = {
   src: string;
   category: string;
-  comment: string;
-  client: string;
+  caption: string;
+  priority?: boolean;
 };
-
-function Stars() {
-  return (
-    <div className="flex gap-0.5 text-brand-gold" aria-label="5 out of 5 stars">
-      {Array.from({ length: 5 }).map((_, i) => (
-        <Star key={i} size={14} fill="currentColor" strokeWidth={0} />
-      ))}
-    </div>
-  );
-}
 
 export default function GalleryGrid({ photos }: { photos: Photo[] }) {
   const [active, setActive] = useState<Photo | null>(null);
@@ -56,24 +46,20 @@ export default function GalleryGrid({ photos }: { photos: Photo[] }) {
             <div className="relative w-full h-48 sm:h-56 md:h-64 overflow-hidden">
               <Image
                 src={photo.src}
-                alt={`${photo.category} project by Elevation 100 LLC in Utah`}
+                alt={photo.caption}
                 fill
                 sizes="(max-width: 768px) 50vw, 33vw"
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
-                loading="lazy"
+                priority={photo.priority ?? false}
               />
             </div>
             <div className="p-4 md:p-5">
               <p className="text-xs font-heading uppercase tracking-[0.3em] text-brand-gold">
                 {photo.category}
               </p>
-              <p className="mt-3 text-sm text-white/80 leading-relaxed line-clamp-3">
-                “{photo.comment}”
+              <p className="mt-3 text-sm text-white/80 leading-relaxed">
+                {photo.caption}
               </p>
-              <div className="mt-3 flex items-center justify-between">
-                <span className="text-xs text-white/60">— {photo.client}</span>
-                <Stars />
-              </div>
             </div>
           </motion.button>
         ))}
@@ -111,7 +97,7 @@ export default function GalleryGrid({ photos }: { photos: Photo[] }) {
               <div className="relative w-full h-[55vh] sm:h-[65vh] bg-black">
                 <Image
                   src={active.src}
-                  alt={`${active.category} project by Elevation 100 LLC in Utah`}
+                  alt={active.caption}
                   fill
                   sizes="100vw"
                   className="object-contain"
@@ -121,13 +107,9 @@ export default function GalleryGrid({ photos }: { photos: Photo[] }) {
                 <p className="text-xs font-heading uppercase tracking-[0.3em] text-brand-gold">
                   {active.category}
                 </p>
-                <p className="mt-3 text-base md:text-lg text-white/90 italic">
-                  “{active.comment}”
+                <p className="mt-3 text-base md:text-lg text-white/90">
+                  {active.caption}
                 </p>
-                <p className="mt-2 text-sm text-white/60">— {active.client}</p>
-                <div className="mt-3 flex justify-center">
-                  <Stars />
-                </div>
               </div>
             </motion.div>
           </motion.div>

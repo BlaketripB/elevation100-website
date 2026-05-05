@@ -43,12 +43,12 @@ const services = [
   {
     icon: Hammer,
     title: "Custom Home Framing",
-    copy: "Rock-solid framing built to spec by crews who treat every stud like it's their own.",
+    copy: "Rock-solid framing built to spec by crews who build every home like it's their own.",
   },
   {
     icon: Wrench,
     title: "Remodeling",
-    copy: "Kitchens, baths, and whole-home transformations that honor the original bones.",
+    copy: "From Decks, to Additions, to whole home transformations that honor the home's original bones.",
   },
   {
     icon: Construction,
