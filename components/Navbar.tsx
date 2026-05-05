@@ -47,7 +47,7 @@ export default function Navbar() {
           <div className="relative h-10 w-10 md:h-12 md:w-12">
             <Image
               src="/images/logo.png"
-              alt="Elevation 100 LLC logo"
+              alt="Elevation 100 LLC — Utah custom home builder logo"
               fill
               sizes="48px"
               className="object-contain"

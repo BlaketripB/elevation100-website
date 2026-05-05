@@ -15,17 +15,32 @@ import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 export const metadata: Metadata = {
   title: {
     absolute:
-      "Elevation 100 LLC | Custom Home Builder & Framing Contractor in Utah",
+      "Custom Home Builder Utah | Park City Contractor | Elevation 100",
   },
   description:
-    "Elevation 100 LLC builds custom homes, handles architectural design, framing, remodels, and steel installation across Utah. Where Building Begins.",
+    "Elevation 100 LLC is a Utah custom home builder serving Park City, Deer Valley, Heber Valley, and Utah County. Custom homes, framing, remodels, architectural plans, and steel installation. Where Building Begins.",
+  keywords: [
+    "custom home builder Utah",
+    "Park City contractor",
+    "Deer Valley custom homes",
+    "Heber Valley builder",
+    "Utah County custom homes",
+  ],
   alternates: { canonical: "/" },
   openGraph: {
     title:
-      "Elevation 100 LLC | Custom Home Builder & Framing Contractor in Utah",
+      "Custom Home Builder Utah | Park City Contractor | Elevation 100",
     description:
-      "Elevation 100 LLC builds custom homes, handles architectural design, framing, remodels, and steel installation across Utah. Where Building Begins.",
+      "Utah custom home builder serving Park City, Deer Valley, Heber Valley, and Utah County. Custom homes, framing, remodels, and steel installation.",
     url: "/",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "Custom Home Builder Utah | Park City Contractor | Elevation 100",
+    description:
+      "Utah custom home builder serving Park City, Deer Valley, Heber Valley, and Utah County.",
   },
 };
 
@@ -75,6 +90,10 @@ export default function HomePage() {
 
           <Reveal delay={0.35}>
             <h1 className="heading-xl mt-10 text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.5)]">
+              <span className="sr-only">
+                Elevation 100 — Custom Home Builder in Utah, serving Park City,
+                Deer Valley, and Heber Valley.{" "}
+              </span>
               ELEVATION 100
               <span className="block text-brand-gold text-2xl sm:text-3xl md:text-4xl tracking-[0.3em] mt-3">
                 WHERE BUILDING BEGINS
@@ -88,8 +107,9 @@ export default function HomePage() {
 
           <Reveal delay={0.7}>
             <p className="mt-6 max-w-xl text-sm md:text-base text-white opacity-90">
-              Custom homes, plans, framing, remodels, and steel, built with
-              craftsmanship that lasts generations.
+              Custom homes, plans, framing, remodels, and steel — serving Park
+              City, Deer Valley, Heber Valley, and Utah County with craftsmanship
+              that lasts generations.
             </p>
           </Reveal>
 

@@ -13,7 +13,7 @@ export default function HeroLogo() {
     >
       <Image
         src="/images/logo.png"
-        alt="Elevation 100 LLC crosshair compass logo"
+        alt="Elevation 100 LLC — Utah custom home builder crosshair compass logo"
         fill
         sizes="(max-width: 768px) 50vw, 25vw"
         className="object-contain"

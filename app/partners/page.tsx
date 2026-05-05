@@ -4,15 +4,28 @@ import Reveal from "@/components/Reveal";
 import { ExternalLink } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Our Partners | Elevation 100 LLC Trusted Trade Partners",
+  title: "Trusted Trade Partners | Utah Custom Home Builder Network",
   description:
-    "Elevation 100 LLC partners with the best trade contractors and suppliers in Utah. BBB accredited construction company.",
+    "Elevation 100 partners with Utah's best excavators, electricians, plumbers, roofers, and cabinetmakers to deliver high-end custom homes in Park City, Deer Valley, and Utah County. BBB accredited.",
+  keywords: [
+    "Utah construction trade partners",
+    "Park City contractor partners",
+    "BBB accredited Utah builder",
+    "Utah custom home network",
+  ],
   alternates: { canonical: "/partners" },
   openGraph: {
-    title: "Our Partners | Elevation 100 LLC Trusted Trade Partners",
+    title: "Trusted Trade Partners | Utah Custom Home Builder Network",
     description:
-      "Elevation 100 LLC partners with the best trade contractors and suppliers in Utah. BBB accredited construction company.",
+      "Elevation 100 partners with Utah's best trade contractors and suppliers. BBB accredited custom home builder serving Park City, Deer Valley, and Utah County.",
     url: "/partners",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Trusted Trade Partners | Utah Custom Home Builder Network",
+    description:
+      "Elevation 100's network of Utah trade partners and suppliers. BBB accredited.",
   },
 };
 
@@ -41,7 +54,7 @@ export default function PartnersPage() {
             <div className="relative w-40 h-40 md:w-52 md:h-52">
               <Image
                 src="/images/logo.png"
-                alt="Elevation 100 LLC crosshair compass logo"
+                alt="Elevation 100 LLC — Utah custom home builder crosshair compass logo"
                 fill
                 sizes="200px"
                 className="object-contain"
@@ -75,6 +88,9 @@ export default function PartnersPage() {
             </Reveal>
             <Reveal delay={0.1}>
               <h1 className="heading-lg mt-4 text-brand-black">
+                <span className="sr-only">
+                  Utah Custom Home Builder Trade Partners —{" "}
+                </span>
                 Built on Strong Relationships
               </h1>
             </Reveal>
@@ -83,8 +99,9 @@ export default function PartnersPage() {
             </Reveal>
             <Reveal delay={0.3}>
               <p className="mt-6 max-w-xl text-sm md:text-base text-brand-black/70">
-                Behind every great build is a network of craftsmen, suppliers,
-                and partners we&apos;re proud to work alongside.
+                Behind every Park City, Deer Valley, and Utah County build is a
+                network of craftsmen, suppliers, and trade partners we&apos;re
+                proud to work alongside.
               </p>
             </Reveal>
           </div>

@@ -16,7 +16,7 @@ export default function Footer() {
         <div className="relative h-16 w-16">
           <Image
             src="/images/logo.png"
-            alt="Elevation 100 LLC logo"
+            alt="Elevation 100 LLC — Utah custom home builder logo"
             fill
             sizes="64px"
             loading="lazy"
@@ -76,7 +76,7 @@ export default function Footer() {
         </ul>
 
         <p className="text-xs text-white/50 pt-6">
-          © 2025 Elevation 100 LLC. All Rights Reserved.
+          © 2026 Elevation 100 LLC. All Rights Reserved.
         </p>
       </div>
     </footer>

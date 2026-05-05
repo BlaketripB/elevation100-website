@@ -4,15 +4,29 @@ import Reveal from "@/components/Reveal";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Project Gallery | Elevation 100 LLC Custom Home Construction",
+  title: "Custom Home Gallery Utah | Park City Home Builder Portfolio",
   description:
-    "View our latest custom home builds, framing projects, remodels, and steel installations from Elevation 100 LLC.",
+    "Browse Elevation 100's portfolio of custom homes, framing, remodels, and steel installations across Park City, Deer Valley, Heber Valley, and Utah County.",
+  keywords: [
+    "custom home gallery Utah",
+    "Park City home builder portfolio",
+    "Deer Valley custom home photos",
+    "Utah framing project portfolio",
+    "Utah remodel gallery",
+  ],
   alternates: { canonical: "/gallery" },
   openGraph: {
-    title: "Project Gallery | Elevation 100 LLC Custom Home Construction",
+    title: "Custom Home Gallery Utah | Park City Home Builder Portfolio",
     description:
-      "View our latest custom home builds, framing projects, remodels, and steel installations.",
+      "Browse Elevation 100's portfolio of custom homes, framing, remodels, and steel installations across Park City, Deer Valley, and Utah County.",
     url: "/gallery",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Custom Home Gallery Utah | Park City Home Builder Portfolio",
+    description:
+      "Custom homes, framing, remodels, and steel installations across Park City, Deer Valley, and Utah County.",
   },
 };
 
@@ -20,6 +34,7 @@ type Photo = {
   src: string;
   category: string;
   caption: string;
+  alt: string;
   priority?: boolean;
 };
 
@@ -28,22 +43,26 @@ const recentWork: Photo[] = [
     src: "/gallery/framing-current-trusses.jpg",
     category: "Recent Work",
     caption: "Current Framing Project",
+    alt: "Custom home framing with roof trusses in progress by Elevation 100, Utah custom home builder",
     priority: true,
   },
   {
     src: "/gallery/remodel-current-project.jpg",
     category: "Recent Work",
     caption: "Current Remodel Project",
+    alt: "Active home remodel project by Elevation 100 in Utah County",
   },
   {
     src: "/gallery/framing-mountain-view.jpg",
     category: "Recent Work",
     caption: "Recent Project",
+    alt: "Custom home framing with mountain backdrop, Park City and Heber Valley custom home builder",
   },
   {
     src: "/gallery/custom-metal-install.jpg",
     category: "Recent Work",
     caption: "Custom Steel Install",
+    alt: "Structural steel installation on a custom home build by Elevation 100 in Utah",
   },
 ];
 
@@ -52,21 +71,25 @@ const pastProjects: Photo[] = [
     src: "/gallery/framing-past-winter-build.jpg",
     category: "Past Projects",
     caption: "Past Framing Project",
+    alt: "Custom home framing project during a Utah winter build by Elevation 100",
   },
   {
     src: "/gallery/framing-past-drone-view.jpg",
     category: "Past Projects",
     caption: "Past Framing Project",
+    alt: "Aerial drone view of a completed framing project, Utah custom home builder",
   },
   {
     src: "/gallery/finishes-elegant-exterior.jpg",
     category: "Past Projects",
     caption: "Elegant Exterior Finishes",
+    alt: "Elegant exterior finishes on a high-end custom home in Park City / Deer Valley",
   },
   {
     src: "/gallery/custom-metal-fabrication.jpg",
     category: "Past Projects",
     caption: "Custom Steel Build",
+    alt: "Custom steel fabrication and structural metalwork by Elevation 100 in Utah",
   },
 ];
 
@@ -101,11 +124,22 @@ export default function GalleryPage() {
               id="gallery-heading"
               className="heading-lg mt-4 max-w-3xl"
             >
+              <span className="sr-only">
+                Custom Home Builder Portfolio in Park City, Deer Valley, and
+                Utah —{" "}
+              </span>
               Built With Precision. Finished With Pride.
             </h1>
           </Reveal>
           <Reveal delay={0.2}>
             <div className="mt-6 h-px w-20 bg-brand-gold" />
+          </Reveal>
+          <Reveal delay={0.3}>
+            <p className="mt-6 max-w-2xl text-sm md:text-base text-white/75">
+              A portfolio of custom homes, framing, remodels, and steel
+              installations from across Park City, Deer Valley, Heber Valley,
+              and Utah County.
+            </p>
           </Reveal>
         </div>
 

@@ -9,6 +9,7 @@ type Photo = {
   src: string;
   category: string;
   caption: string;
+  alt: string;
   priority?: boolean;
 };
 
@@ -46,7 +47,7 @@ export default function GalleryGrid({ photos }: { photos: Photo[] }) {
             <div className="relative w-full h-48 sm:h-56 md:h-64 overflow-hidden">
               <Image
                 src={photo.src}
-                alt={photo.caption}
+                alt={photo.alt}
                 fill
                 sizes="(max-width: 768px) 50vw, 33vw"
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -97,7 +98,7 @@ export default function GalleryGrid({ photos }: { photos: Photo[] }) {
               <div className="relative w-full h-[55vh] sm:h-[65vh] bg-black">
                 <Image
                   src={active.src}
-                  alt={active.caption}
+                  alt={active.alt}
                   fill
                   sizes="100vw"
                   className="object-contain"

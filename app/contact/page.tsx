@@ -4,15 +4,28 @@ import Reveal from "@/components/Reveal";
 import { Phone, Mail, Globe } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Contact Elevation 100 LLC | Request a Quote",
+  title: "Contact a Utah Custom Home Builder | Request a Quote",
   description:
-    "Start your custom home, remodel, or framing project with Elevation 100. Upload your plans and get a response within 24 hours. Call 801-830-5884.",
+    "Start your custom home, remodel, or framing project in Park City, Deer Valley, Heber Valley, or anywhere in Utah. Upload your plans and hear back within 24 hours. Call 801-830-5884.",
+  keywords: [
+    "Utah custom home builder contact",
+    "Park City contractor quote",
+    "Heber Valley home builder",
+    "Utah remodel quote",
+  ],
   alternates: { canonical: "/contact" },
   openGraph: {
-    title: "Contact Elevation 100 LLC | Request a Quote",
+    title: "Contact a Utah Custom Home Builder | Request a Quote",
     description:
-      "Start your custom home, remodel, or framing project with Elevation 100. Upload your plans and get a response within 24 hours. Call 801-830-5884.",
+      "Start your custom home, remodel, or framing project in Park City, Deer Valley, Heber Valley, or anywhere in Utah. Upload your plans and hear back within 24 hours.",
     url: "/contact",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact a Utah Custom Home Builder | Request a Quote",
+    description:
+      "Custom home, remodel, framing, and steel projects in Park City, Deer Valley, and Utah County.",
   },
 };
 
@@ -26,6 +39,9 @@ export default function ContactPage() {
           </Reveal>
           <Reveal delay={0.1}>
             <h1 className="heading-lg mt-4 max-w-3xl text-white">
+              <span className="sr-only">
+                Contact a Utah Custom Home Builder —{" "}
+              </span>
               Start Your Project
             </h1>
           </Reveal>
@@ -34,8 +50,10 @@ export default function ContactPage() {
           </Reveal>
           <Reveal delay={0.3}>
             <p className="mt-6 max-w-xl text-sm md:text-base text-white/75">
-              Fill out the form below and attach your plans. We&apos;ll get
-              back to you within 24 hours.
+              Custom homes, remodels, framing, and steel projects across Park
+              City, Deer Valley, Heber Valley, and Utah County. Fill out the
+              form below and attach your plans — we&apos;ll get back to you
+              within 24 hours.
             </p>
           </Reveal>
         </div>

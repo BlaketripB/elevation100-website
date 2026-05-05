@@ -23,17 +23,22 @@ const SITE_URL = "https://elevation100.com";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Elevation 100 LLC | Custom Home Builder & Framing Contractor in Utah",
+    default:
+      "Custom Home Builder Utah | Park City Contractor | Elevation 100",
     template: "%s | Elevation 100 LLC",
   },
   description:
-    "Elevation 100 LLC builds custom homes, handles architectural design, framing, remodels, and steel installation across Utah. Where Building Begins.",
+    "Elevation 100 LLC is a Utah custom home builder serving Park City, Deer Valley, Heber Valley, and Utah County. Custom homes, architectural plans, framing, remodels, and steel.",
   keywords: [
     "custom home builder Utah",
-    "home framing contractor",
-    "architectural plan design",
-    "remodeling contractor Utah",
-    "steel installation",
+    "Park City contractor",
+    "Deer Valley custom homes",
+    "Heber Valley home builder",
+    "Utah County contractor",
+    "home framing contractor Utah",
+    "architectural plan design Utah",
+    "remodeling contractor Park City",
+    "steel installation Utah",
     "Elevation 100",
   ],
   applicationName: "Elevation 100 LLC",
@@ -49,24 +54,26 @@ export const metadata: Metadata = {
     url: SITE_URL,
     siteName: "Elevation 100 LLC",
     title:
-      "Elevation 100 LLC | Custom Home Builder & Framing Contractor in Utah",
+      "Custom Home Builder Utah | Park City Contractor | Elevation 100",
     description:
-      "Custom homes, architectural design, framing, remodels, and steel installation across Utah. Where Building Begins.",
+      "Utah custom home builder serving Park City, Deer Valley, Heber Valley, and Utah County. Custom homes, framing, remodels, and steel installation. Where Building Begins.",
     images: [
       {
         url: "/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Elevation 100 LLC — Where Building Begins",
+        alt: "Elevation 100 LLC — Custom Home Builder in Utah",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
+    site: "@elevation100",
+    creator: "@elevation100",
     title:
-      "Elevation 100 LLC | Custom Home Builder & Framing Contractor in Utah",
+      "Custom Home Builder Utah | Park City Contractor | Elevation 100",
     description:
-      "Custom homes, architectural design, framing, remodels, and steel installation across Utah.",
+      "Utah custom home builder serving Park City, Deer Valley, Heber Valley, and Utah County.",
     images: ["/images/og-image.png"],
   },
   icons: {
